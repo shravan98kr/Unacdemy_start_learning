@@ -1,4 +1,4 @@
-package runner;
+package com.unacademy.runner;
 
 import org.junit.runner.RunWith;
 
@@ -6,8 +6,8 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src\\test\\resources\\AppFearure\\Unacademy_Start_Learning_Competative_Exams.feature",
-                 glue = {"stepDefinations"},
+@CucumberOptions(features = "src\\test\\resources\\AppFearure\\UnacademyStartLearningCompetativeExams.feature",
+                 glue = {"com.unacademy.stepdefinations"},
                  dryRun = false,
                  monochrome = true)
 public class TestRunner 
