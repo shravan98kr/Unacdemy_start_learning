@@ -17,13 +17,13 @@ Feature: Exploring Start Learning for Competative Exams
     Then user is on Courses starting soon section
     When user clicks on "<course>" to explore course
     Then user is on course page
-    When user navigates to goal Home page
+    When user goes back to goal Home page
     And user scrolls down to find Best of all time section
     Then user is on Best of all time section
     When user clicks on "<best_course>" to explore best course
     Then user is on respective best course page
 
     Examples: 
-      | goal          | batch                                    | course                          | best_course                |
-      | CBSE Class 9  | Target 22 Batch: Full NCERT Syllabus     | Course on French Literature     | Complete Course on English |
-      | CBSE Class 12 | MCQs Practice Batch for TERM 1 - Science | Detailed Course on Reproduction | Detailed Course on English |
+      | goal          | batch                                | course                                                       | best_course                |
+      | CBSE Class 9  | Target 22 Batch: Full NCERT Syllabus | Foundation Course on Biology                                 | Complete Course on English |
+      | CBSE Class 12 | Lakshya Batch for Term 1 - Science   | Detailed Course on Indian Economy on The Eve of Independence | Detailed Course on English |

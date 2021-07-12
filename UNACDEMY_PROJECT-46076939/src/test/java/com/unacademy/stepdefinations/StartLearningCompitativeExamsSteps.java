@@ -20,10 +20,10 @@ public class StartLearningCompitativeExamsSteps
 {  
 
 	public WebDriver driver;
-	ChooseYourGoalPageFactory goalpage;
-	GoalHomePagePageFactory homepage;
-	StartLearningPageFactory startlearningpage;
-	Utility util;
+	public ChooseYourGoalPageFactory goalpage;
+	public GoalHomePagePageFactory homepage;
+	public StartLearningPageFactory startlearningpage;
+	public Utility util;
 
 	public  String goal;
 	public String educator;
@@ -40,14 +40,15 @@ public class StartLearningCompitativeExamsSteps
 		goalpage= new ChooseYourGoalPageFactory(driver);
 		homepage = new GoalHomePagePageFactory(driver);
 		startlearningpage = new StartLearningPageFactory(driver);
-		driver.manage().window().maximize();
+		
 	}
 
 	@Given("User is on Unacdemy page")
 	public void user_is_on_Unacdemy_page() throws InterruptedException, IOException 
 	{
+		driver.manage().window().maximize();
 		driver.get(util.getBaseUrl());
-		Thread.sleep(2000);
+		util.waitMetod(2);
 		System.out.println(driver.getTitle());
 	}
 
@@ -58,13 +59,13 @@ public class StartLearningCompitativeExamsSteps
 	}
 
 	@Then("user is on Choose your goal page where the list of topics are displayed")
-	public void user_is_on_Choose_your_goal_page_where_the_list_of_topics_are_displayed() throws IOException 
+	public void user_is_on_Choose_your_goal_page_where_the_list_of_topics_are_displayed() throws IOException, InterruptedException 
 	{
-		Assert.assertEquals(goalpage.noOfGoals(),util.getNoOfGoalsInExamsSection());  
+		Assert.assertEquals(goalpage.noOfGoals(),util.noOfGoalsInExams());  
 	}
 
 	@When("user clicks on {string} to be the goal")
-	public void user_clicks_on_to_be_the_goal(String goal)
+	public void user_clicks_on_to_be_the_goal(String goal) throws InterruptedException
 	{ 
 		this.goal=goal;
 		goalpage.clickOnGoal(goal);
@@ -73,7 +74,9 @@ public class StartLearningCompitativeExamsSteps
 	@Then("user is on goal home page")
 	public void user_is_on_goal_home_page() throws InterruptedException, IOException
 	{
-		Assert.assertEquals(homepage.getTitle(),util.getExpectedHomeTitle(goal));
+		util.waitMetod(4);
+		System.out.println(driver.getTitle());
+		Assert.assertEquals(homepage.getTitle().contains(goal.substring(0,5)),true);
 	}
 
 	@When("user scrolls down on home to verify different sections are present")
@@ -124,7 +127,8 @@ public class StartLearningCompitativeExamsSteps
 	@Then("user is on the profile page")
 	public void user_is_on_the_profile_page() throws InterruptedException, IOException 
 	{
-		Assert.assertEquals(homepage.getTitle(),util.getExpectedEducatorTitle(educator));
+		util.waitMetod(3);
+		Assert.assertEquals(homepage.getTitle().contains(educator),true);
 	}
 
 	@When("user navigates to goal home page")
@@ -140,7 +144,8 @@ public class StartLearningCompitativeExamsSteps
 	}
 
 	@Then("user is on the Comprehensive syllabus section")
-	public void user_is_on_the_Comprehensive_syllabus_section() throws InterruptedException {
+	public void user_is_on_the_Comprehensive_syllabus_section() throws InterruptedException 
+	{
 		Assert.assertEquals(homepage.isComprehensiveSyllabusHeaderDisplayed(),true);
 	}
 
@@ -154,7 +159,8 @@ public class StartLearningCompitativeExamsSteps
 	@Then("user is navigated to the syllabus page")
 	public void user_is_navigated_to_the_syllabus_page() throws InterruptedException, IOException 
 	{
-		Assert.assertEquals(homepage.getTitle(),util.getExpectedSyllabusTitle(syllabus));
+		util.waitMetod(3);
+		Assert.assertEquals(homepage.getTitle().contains(syllabus),true);
 	}
 
 	@When("user scrolls to find Get the Learning App Section")
@@ -179,7 +185,8 @@ public class StartLearningCompitativeExamsSteps
 	@Then("user is on Application Installation Page")
 	public void user_is_on_Application_Installation_Page() throws InterruptedException, IOException 
 	{
-		Assert.assertEquals(homepage.getTitle(),util.getExpectedApplicationTitle(app));
+		util.waitMetod(3);
+		Assert.assertEquals(homepage.getTitle().contains(goal.substring(0,5)),true);
 	}
 
 	@After

@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src\\test\\resources\\AppFearure\\UnacademyStartLearningCompetativeExams.feature",
+@CucumberOptions(features = "src\\test\\resources\\AppFearure\\UnacademyStartLearningClass6To12.feature",
                  glue = {"com.unacademy.stepdefinations"},
                  dryRun = false,
                  monochrome = true)

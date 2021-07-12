@@ -1,19 +1,20 @@
 package com.unacademy.pom;
 
-import org.openqa.selenium.JavascriptExecutor;
+import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.unacademy.library.Utility;
+
 public class StartLearningPageFactory 
 {
 	public WebDriver driver;
-	JavascriptExecutor je ;
+	public Utility util = new Utility();
 	
-	@FindBy(xpath = "//div//section//child::div[2]//div//div//child::section//child::div[1]//child::div[2]//a//button[text()='Start learning']") WebElement startlearningcompetativecmd;
-	@FindBy(xpath = "//div//section//child::div[2]//div//div//child::section//child::div[2]//child::div[2]//a//button[text()='Start learning']") WebElement startlearningclass6to12cmd;
-
+	@FindBy(xpath = "//button[text()='Start learning']") List<WebElement> startlearningcmd;
+	
 	public StartLearningPageFactory(WebDriver driver) 
 	{
 		super();
@@ -22,18 +23,17 @@ public class StartLearningPageFactory
 	}
 	public void clickStartLearnComptitiveCmd() throws InterruptedException 
 	{
-		je =(JavascriptExecutor) driver;
-		je.executeScript("window.scrollBy(0,250)");
-		Thread.sleep(1000);
+		WebElement startlearningcompetativecmd = startlearningcmd.get(0);
+		util.scrolltoElement(driver, startlearningcompetativecmd);
+		util.waitMetod(3);
 		startlearningcompetativecmd.click();
 	}
 
 	public void clickStartLearnClass6to12Cmd() throws InterruptedException 
 	{
-		je =(JavascriptExecutor) driver;
-		
-		je.executeScript("window.scrollBy(0,250)");
-		Thread.sleep(1000);
+		WebElement startlearningclass6to12cmd = startlearningcmd.get(1);
+		util.scrolltoElement(driver, startlearningclass6to12cmd);
+		util.waitMetod(3);
 		startlearningclass6to12cmd.click();
 	}
 

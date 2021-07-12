@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-07-12T17:00:04 IST" name="Default suite" finished-at="2021-07-12T17:04:50 IST" duration-ms="285956">
+    <groups>
+    </groups>
+    <test started-at="2021-07-12T17:00:04 IST" name="Default test" finished-at="2021-07-12T17:04:50 IST" duration-ms="285956">
+      <class name="com.unacademy.testng.TestNg">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.unacademy.testng.TestNg@1da2cb77]" started-at="2021-07-12T17:00:05 IST" name="initialization" finished-at="2021-07-12T17:00:28 IST" duration-ms="22617" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="choosingGoalInCompitativeExams(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.unacademy.testng.TestNg@1da2cb77]" started-at="2021-07-12T17:00:28 IST" name="choosingGoalInCompitativeExams" data-provider="excel-data1" finished-at="2021-07-12T17:01:46 IST" duration-ms="77733" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IIT JEE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Brijesh Jindal]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mathematics]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Play Store]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- choosingGoalInCompitativeExams -->
+        <test-method is-config="true" signature="termination()[pri:0, instance:com.unacademy.testng.TestNg@1da2cb77]" started-at="2021-07-12T17:01:46 IST" name="termination" finished-at="2021-07-12T17:01:46 IST" duration-ms="515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- termination -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.unacademy.testng.TestNg@1da2cb77]" started-at="2021-07-12T17:01:46 IST" name="initialization" finished-at="2021-07-12T17:01:58 IST" duration-ms="12169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="choosingGoalInCompitativeExams(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.unacademy.testng.TestNg@1da2cb77]" started-at="2021-07-12T17:01:58 IST" name="choosingGoalInCompitativeExams" data-provider="excel-data1" finished-at="2021-07-12T17:03:15 IST" duration-ms="76365" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bank Exams]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nimisha Bansal]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Reasoning]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[appStore]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- choosingGoalInCompitativeExams -->
+        <test-method is-config="true" signature="termination()[pri:0, instance:com.unacademy.testng.TestNg@1da2cb77]" started-at="2021-07-12T17:03:15 IST" name="termination" finished-at="2021-07-12T17:03:15 IST" duration-ms="412" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- termination -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.unacademy.testng.TestNg@1da2cb77]" started-at="2021-07-12T17:03:15 IST" name="initialization" finished-at="2021-07-12T17:03:28 IST" duration-ms="12961" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="choosingGoalInClass6To12(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.unacademy.testng.TestNg@1da2cb77]" started-at="2021-07-12T17:03:28 IST" name="choosingGoalInClass6To12" data-provider="excel-data2" finished-at="2021-07-12T17:04:35 IST" duration-ms="67114" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CBSE Class 9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Target 22 Batch: Full NCERT Syllabus]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Foundation Course on Biology]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Complete Course on English]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- choosingGoalInClass6To12 -->
+        <test-method is-config="true" signature="termination()[pri:0, instance:com.unacademy.testng.TestNg@1da2cb77]" started-at="2021-07-12T17:04:35 IST" name="termination" finished-at="2021-07-12T17:04:36 IST" duration-ms="410" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- termination -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.unacademy.testng.TestNg@1da2cb77]" started-at="2021-07-12T17:04:36 IST" name="initialization" finished-at="2021-07-12T17:04:46 IST" duration-ms="10198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="choosingGoalInClass6To12(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.unacademy.testng.TestNg@1da2cb77]" started-at="2021-07-12T17:04:46 IST" name="choosingGoalInClass6To12" data-provider="excel-data2" finished-at="2021-07-12T17:04:50 IST" duration-ms="4177" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CBSE Class 12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Lakshya Batch for Term 1 - Science]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Detailed Course on Indian Economy on The Eve of Independence]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Detailed Course on English]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element is not clickable at point (726, 759)
+  (Session info: chrome=91.0.4472.124)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIN83000122', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\SHRAVKR\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:53366}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: aa11c1aacdc5e4bb0cd45d3685a764df]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (726, 759)
+  (Session info: chrome=91.0.4472.124)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIN83000122', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\SHRAVKR\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:53366}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: aa11c1aacdc5e4bb0cd45d3685a764df
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at com.unacademy.pom.StartLearningPageFactory.clickStartLearnClass6to12Cmd(StartLearningPageFactory.java:37)
+at com.unacademy.testng.TestNg.choosingGoalInClass6To12(TestNg.java:121)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- choosingGoalInClass6To12 -->
+        <test-method is-config="true" signature="termination()[pri:0, instance:com.unacademy.testng.TestNg@1da2cb77]" started-at="2021-07-12T17:04:50 IST" name="termination" finished-at="2021-07-12T17:04:50 IST" duration-ms="415" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- termination -->
+      </class> <!-- com.unacademy.testng.TestNg -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

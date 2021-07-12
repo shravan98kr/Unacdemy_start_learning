@@ -2,26 +2,58 @@ package com.unacademy.stepdefinations;
 
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import com.unacademy.library.Utility;
 import com.unacademy.pom.ChooseYourGoalPageFactory;
 import com.unacademy.pom.GoalHomePagePageFactory;
 import com.unacademy.pom.StartLearningPageFactory;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class StartLearningClass6To12 
 {
 	public WebDriver driver;
-	ChooseYourGoalPageFactory goalpage;
-	GoalHomePagePageFactory homepage;
-	StartLearningPageFactory startlearningpage;
-	Utility util;
+	public ChooseYourGoalPageFactory goalpage;
+	public GoalHomePagePageFactory homepage;
+	public StartLearningPageFactory startlearningpage;
+	public Utility util;
 
 	public  String goal;
 	public String batch;
 	public String course;
 	public String best_course;
+	
+	@Before
+	public void Inintialization() throws IOException
+	{
+		util= new Utility();
+		System.setProperty(util.getWebDriver(),util.getExecutor());
+		driver=new ChromeDriver();
+		goalpage= new ChooseYourGoalPageFactory(driver);
+		homepage = new GoalHomePagePageFactory(driver);
+		startlearningpage = new StartLearningPageFactory(driver);
+	}
+	
+	@After
+	public void browserDeLaunch()
+	{
+		homepage.quit();
+	}
+	
+	@Given("User is on Unacdemy page")
+	public void user_is_on_Unacdemy_page() throws InterruptedException, IOException 
+	{
+		driver.manage().window().maximize();
+		driver.get(util.getBaseUrl());
+		util.waitMetod(2);
+		System.out.println(driver.getTitle());
+	}
+
 
 	@When("user clicks on Prepare for Class6to12 Start Learning button")
 	public void user_clicks_on_Prepare_for_Class6to12_Start_Learning_button() throws InterruptedException
@@ -30,13 +62,13 @@ public class StartLearningClass6To12
 	}
 
 	@Then("user is on Choose your goal page where the list of goals of Class6to12 are displayed")
-	public void user_is_on_Choose_your_goal_page_where_the_list_of_goals_of_Class6to12_are_displayed() throws IOException 
+	public void user_is_on_Choose_your_goal_page_where_the_list_of_goals_of_Class6to12_are_displayed() throws IOException, InterruptedException 
 	{
-		Assert.assertEquals(goalpage.noOfGoals(),util.getNoOfGoalsInClassSection());  
+		Assert.assertEquals(goalpage.noOfGoals(),util.noOfGoalsInClass());  
 	}
 
 	@When("user clicks on a {string} to be the goal")
-	public void user_clicks_on_a_to_be_the_goal(String goal) 
+	public void user_clicks_on_a_to_be_the_goal(String goal) throws InterruptedException 
 	{
 		this.goal=goal;
 		goalpage.clickOnGoal(goal);
@@ -45,7 +77,7 @@ public class StartLearningClass6To12
 	@Then("user is on Goal Home page")
 	public void user_is_on_Goal_Home_page() throws InterruptedException, IOException 
 	{
-		Assert.assertEquals(homepage.getTitle(),util.getExpectedHomeTitle(goal));
+		Assert.assertEquals(homepage.getTitle().contains(goal),true);
 	}
 
 	@When("user scrolls down on home to view different sections are present")
@@ -71,7 +103,7 @@ public class StartLearningClass6To12
 		Assert.assertEquals(homepage.isBestOfAllTimeHeaderDisplayed(),true);
 		Assert.assertEquals(homepage.isComprehensiveSyllabusHeaderDisplayed(),true);
 		Assert.assertEquals(homepage.isTrackYourPreparationHeaderDisplayed(),true);
-		Assert.assertEquals(homepage.isApplicationHeaderDisplayed(),true);
+		Assert.assertEquals(homepage.isAppHeaderDisplayed(),true);
 	}
 
 	@When("user scrolls down to find Batches for syllabus completion section")
@@ -96,14 +128,13 @@ public class StartLearningClass6To12
 	@Then("user is on batch page")
 	public void user_is_on_batch_page() throws InterruptedException, IOException 
 	{
-		Assert.assertEquals(homepage.getTitle(),util.getExpectedBatchTitle(batch));
+		Assert.assertEquals(homepage.getTitle().contains(batch),true);
 	}
 
 	@When("user navigates to goal Home page")
-	public void user_navigates_to_goal_Home_page() 
+	public void user_navigates_to_goal_Home_page() throws InterruptedException 
 	{
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		homepage.navigation();
 	}
 
 	@When("user scrolls down to find Courses starting soon section")
@@ -128,7 +159,8 @@ public class StartLearningClass6To12
 	@Then("user is on course page")
 	public void user_is_on_course_page() throws InterruptedException, IOException 
 	{
-		Assert.assertEquals(homepage.getTitle(),util.getExpectedBatchTitle(batch));
+		Assert.assertEquals(homepage.getTitle().contains(course),true);
+		
 	}
 
 
@@ -154,7 +186,12 @@ public class StartLearningClass6To12
 	@Then("user is on respective best course page")
 	public void user_is_on_respective_best_course_page() throws InterruptedException, IOException 
 	{
-		Assert.assertEquals(homepage.getTitle(),util.getExpectedBestCourseTitle(batch));
+		Assert.assertEquals(homepage.getTitle().contains(best_course),true);
+	}
+	@When("user goes back to goal Home page")
+	public void user_goes_back_to_goal_Home_page() throws InterruptedException 
+	{
+	   homepage.clickOnHomeNavigationHeader(goal);   
 	}
 
 }
