@@ -58,7 +58,7 @@ public class TestNg
 		return arrObj;
 	}
 
-	@Test(dataProvider ="excel-data1",groups = "one")
+	@Test(priority = 1,dataProvider ="excel-data1",groups = "one")
 	public void choosingGoalInCompitativeExams(String goal,String educator,String syllabus,String app) throws InterruptedException   
 	{
 		startlearningpage.clickStartLearnComptitiveCmd();
@@ -108,7 +108,7 @@ public class TestNg
 		Assert.assertEquals(homepage.getTitle().contains(goal.substring(0,5)),true);
 	}
 
-	@Test(dataProvider ="excel-data2",groups = "two")
+	@Test(priority = 2,dataProvider ="excel-data2",groups = "two")
 	public void choosingGoalInClass6To12(String goal,String batch,String course,String best_course) throws InterruptedException   
 	{
 		startlearningpage.clickStartLearnClass6to12Cmd();

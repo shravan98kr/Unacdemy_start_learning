@@ -5,9 +5,10 @@
     <classes>
       <class name="com.unacademy.testng.TestNg">
         <methods>
-          <include name="choosingGoalInClass6To12" invocation-numbers="1"/>
+          <include name="choosingGoalInClass6To12" invocation-numbers="0 1"/>
           <include name="initialization"/>
           <include name="termination"/>
+          <include name="choosingGoalInCompitativeExams" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.unacademy.testng.TestNg -->
     </classes>
