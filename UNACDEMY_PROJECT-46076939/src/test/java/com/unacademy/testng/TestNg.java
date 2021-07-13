@@ -17,25 +17,17 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestNg 
 {
-	public WebDriver driver;
 	public ChooseYourGoalPageFactory goalpage;
 	public GoalHomePagePageFactory homepage;
 	public StartLearningPageFactory startlearningpage;
 	public ExcelUtility excelutil = new ExcelUtility();
 	public Utility util = new Utility();
-	public  String goal;
-	public String educator;
-	public String syllabus;
-	public String app;
-	public String batch;
-	public String course;
-	public String best_course;
 
-	@BeforeMethod
+	@BeforeMethod(groups = {"one","two"})
 	public void initialization() throws IOException, InterruptedException 
 	{
 		System.setProperty(util.getWebDriver(),util.getExecutor());
-		driver=new ChromeDriver();
+		WebDriver driver=new ChromeDriver();
 		goalpage= new ChooseYourGoalPageFactory(driver);
 		homepage = new GoalHomePagePageFactory(driver);
 		startlearningpage = new StartLearningPageFactory(driver);
@@ -44,7 +36,7 @@ public class TestNg
 		util.waitMetod(2);
 	}
 
-	@AfterMethod
+	@AfterMethod(groups = {"one","two"})
 	public void termination() 
 	{
 		homepage.quit();
@@ -66,7 +58,7 @@ public class TestNg
 		return arrObj;
 	}
 
-	@Test(priority = 1,dataProvider ="excel-data1")
+	@Test(dataProvider ="excel-data1",groups = "one")
 	public void choosingGoalInCompitativeExams(String goal,String educator,String syllabus,String app) throws InterruptedException   
 	{
 		startlearningpage.clickStartLearnComptitiveCmd();
@@ -75,6 +67,7 @@ public class TestNg
 		util.waitMetod(4);
 		Assert.assertEquals(homepage.getTitle().contains(goal.substring(0,5)),true);
 		homepage.scrollToLiveClassHeader();
+
 		//Exploring different features in goal home page
 		homepage.scrollToPrepareWithTopEducatorHeader();
 		homepage.scrollToBatchesForSyllabusCompletionHeader();
@@ -115,7 +108,7 @@ public class TestNg
 		Assert.assertEquals(homepage.getTitle().contains(goal.substring(0,5)),true);
 	}
 
-	@Test(priority = 2,dataProvider ="excel-data2")
+	@Test(dataProvider ="excel-data2",groups = "two")
 	public void choosingGoalInClass6To12(String goal,String batch,String course,String best_course) throws InterruptedException   
 	{
 		startlearningpage.clickStartLearnClass6to12Cmd();
@@ -161,7 +154,7 @@ public class TestNg
 		Assert.assertEquals(homepage.getTitle().contains(best_course),true);
 
 	}
-//two testng xml-include tags
+	//two testng xml-include tags
 	//parallel excetion 
 	//jenkins
 
